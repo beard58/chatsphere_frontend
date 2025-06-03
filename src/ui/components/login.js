@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from '../../images/Logo.png';
 
 function Login() {
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ function Login() {
       <div className="flex w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Left side illustration */}
         <div className="hidden md:flex md:w-1/2 items-center justify-center bg-blue-100">
-          <img src="/img/Logo.png" alt="Logo" className="w-40 h-40 object-contain" />
+          <img src={logo} alt="Logo" className="w-40 h-40 object-contain" />
         </div>
         {/* Right side form */}
         <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
