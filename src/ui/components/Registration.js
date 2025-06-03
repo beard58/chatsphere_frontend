@@ -1,9 +1,10 @@
 import axios from 'axios';
 import Image from '../../images/TeamMeeting.png';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Registration() {
-
+    const navigate = useNavigate();
     const apiUrl = process.env.REACT_APP_API_URL;
     console.log('API URL:', apiUrl);
     const [formData, setFormData] = useState({
@@ -22,12 +23,14 @@ function Registration() {
     const handleSubmit = async (e) => {
         e.preventDefault();
        try {
-            const response = await axios.post(`${apiUrl}auth/register`, formData, {
+            const response = await axios.post(`${apiUrl}/api/auth/register`, formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
             });
             console.log('Registration successful:', response.data);
+            alert('Registration successful! Please login.');
+            navigate('/login');
         } catch (error) {
             console.error('Registration failed:', error.response?.data || error.message);
         }

@@ -15,7 +15,7 @@ function Home () {
         </button>
         <button
           className="px-4 py-2 bg-yellow-400 text-white rounded hover:bg-yellow-500 transition"
-          onClick={() => navigate('/register')}
+          onClick={() => navigate('/registration')}
         >
           Register
         </button>
