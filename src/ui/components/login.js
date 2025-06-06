@@ -23,10 +23,13 @@ function Login() {
         return;
       }
       const data = await response.json();
+      console.log("Login response data:", data.jwtToken);
+      localStorage.setItem("jwtToken",data.jwtToken)
+      localStorage.setItem("senderId",data.id) // Log the actual response body
       // Save JWT token if needed: localStorage.setItem("token", data.jwtToken);
       // Redirect or update UI as needed
       alert("Login successful!");
-      navigate('/chatModule');
+      navigate('/dashboard');
     } catch (err) {
       setError("Network error");
     }
