@@ -26,7 +26,7 @@ function Login() {
       // Save JWT token if needed: localStorage.setItem("token", data.jwtToken);
       // Redirect or update UI as needed
       alert("Login successful!");
-      navigate('/dashboard');
+      navigate('/chatModule');
     } catch (err) {
       setError("Network error");
     }

@@ -6,6 +6,7 @@ import ForgetPassword from "./ui/components/forgetpassword";
 import Dashboard from "./ui/components/dashboard";
 import ChatComponent from "./ui/components/chatcomponent";
 import Registration from "./ui/components/Registration";
+import ChatStomp from "./ChatStomp";
 
 function AppRoutes() {
   return (
@@ -17,6 +18,8 @@ function AppRoutes() {
          <Route path="/dashboard" element={<Dashboard/>} />
          <Route path="/chat" element={<ChatComponent/>} />
          <Route path="/registration" element={<Registration/>} />
+          <Route path="/chatModule" element={<ChatStomp/>} />
+
       </Routes>
     
   );
